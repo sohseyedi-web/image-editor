@@ -1,0 +1,120 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/bars.png" type="image/x-icon" />
+    <title>Edit Image</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/Shabnam.css" />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+
+  <body dir="rtl">
+    <section class="box">
+      <div class="container">
+        <h2 class="box-title">وبسایت ویرایش عکس</h2>
+        <div class="box-content">
+          <div class="box-content__panel">
+            <div class="box-content__panel-filter">
+              <label class="box-content__panel-filter__title">فیلتر ها</label>
+              <div class="box-content__panel-filter__options">
+                <button
+                  class="box-content__panel-filter__options-btn active-btn"
+                  id="brightness"
+                >
+                  روشنایی
+                </button>
+                <button
+                  class="box-content__panel-filter__options-btn"
+                  id="saturation"
+                >
+                  اشباع سازی
+                </button>
+                <button
+                  class="box-content__panel-filter__options-btn"
+                  id="inversion"
+                >
+                  وارونگی
+                </button>
+                <button
+                  class="box-content__panel-filter__options-btn"
+                  id="grayScale"
+                >
+                  خاکستری
+                </button>
+              </div>
+              <div class="box-content__panel-filter__slider">
+                <div class="box-content__panel-filter__slider-info">
+                  <p class="box-content__panel-filter__slider-info__name">
+                    روشنایی
+                  </p>
+                  <p class="box-content__panel-filter__slider-info__value">
+                    100%
+                  </p>
+                </div>
+                <input
+                  type="range"
+                  name=""
+                  id=""
+                  min="0"
+                  max="200"
+                  value="100"
+                />
+              </div>
+            </div>
+            <div class="box-content__panel-rotate">
+              <label class="box-content__panel-rotate__title">چرخش عکس</label>
+              <div class="box-content__panel-rotate__options">
+                <button
+                  class="box-content__panel-rotate__options-btn"
+                  id="left"
+                >
+                  <i class="fa fa-undo"></i>
+                </button>
+                <button
+                  class="box-content__panel-rotate__options-btn"
+                  id="right"
+                >
+                  <i class="fa fa-repeat"></i>
+                </button>
+                <button
+                  class="box-content__panel-rotate__options-btn"
+                  id="vertical"
+                >
+                  <i class="fa fa-arrows-v"></i>
+                </button>
+                <button
+                  class="box-content__panel-rotate__options-btn"
+                  id="horizantal"
+                >
+                  <i class="fa fa-arrows-h"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="box-content__img">
+            <img src="img/img-placeholder.svg" alt="" />
+          </div>
+        </div>
+        <div class="box-control">
+          <button class="box-control__reset">تنظیم مجدد</button>
+          <div class="box-control__row">
+            <input
+              type="file"
+              accept="image/*"
+              class="box-control__row-file"
+              hidden
+            />
+            <button class="box-control__row-choose">انتخاب عکس</button>
+            <button class="box-control__row-save">ذخیره عکس</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="app.js"></script>
+</html>

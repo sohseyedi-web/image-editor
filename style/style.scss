@@ -1,0 +1,194 @@
+$bgColor: #1d1d42;
+$white: #fffffe;
+$btnColor: #28364e;
+$blue: #556ff7;
+$Save: #6fcf97;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Shabnam", "Segoe UI", Tahoma, sans-serif;
+  list-style-type: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $bgColor;
+}
+
+.box {
+  width: 60%;
+  background-color: $mainColor;
+  border-radius: 0.5rem;
+  padding: 1.8rem 2.1rem;
+
+  &-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $btnColor;
+  }
+  &-content {
+    display: flex;
+    min-height: 350px;
+
+    &__panel {
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      border-radius: 0.5rem;
+      width: 35%;
+      padding: 0.9rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      &-filter {
+        &__title {
+          font-size: 1.1rem;
+          color: $btnColor;
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+        }
+        &__options {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+          button {
+            width: calc(100% / 2 - 4px);
+          }
+          &-btn {
+            margin-bottom: 0.5rem;
+            border-radius: 0.5rem;
+            border: none;
+            height: 35px;
+            border: 1.5px solid $btnColor;
+            transition: 0.3;
+
+            &.active-btn {
+              background-color: $blue;
+              color: $white;
+              transition: 0.3;
+            }
+          }
+        }
+        &__slider {
+          margin: 0.5rem 0;
+          &-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.1rem;
+          }
+          input {
+            width: 100%;
+            height: 5px;
+          }
+        }
+      }
+      &-rotate {
+        &__title {
+          font-size: 1.1rem;
+          color: $btnColor;
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+        }
+        &__options {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+          &-btn {
+            width: calc(100% / 4 - 3px);
+            height: 35px;
+            border: 1.5px solid $btnColor;
+            transition: 0.3;
+            border-radius: 0.5rem;
+          }
+        }
+      }
+    }
+    &__img {
+      width: 60%;
+      margin-right: 2rem;
+      overflow: hidden;
+
+      img {
+        max-width: 490px;
+        max-height: 335px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  &-control {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+
+    button {
+      border-radius: 0.5rem;
+      height: 35px;
+      width: 150px;
+      font-weight: 500;
+      border: 1px solid $btnColor;
+    }
+    &__reset {
+      background-color: $white;
+      opacity: 0.8;
+    }
+    &__row {
+      &-choose {
+        border: none;
+        background-color: $blue;
+        color: $white;
+        margin: 0 1rem;
+      }
+      &-save {
+        border: none;
+
+        background-color: $Save;
+        color: $btnColor;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 95%;
+
+    &-content {
+      flex-direction: column-reverse;
+
+      &__panel,
+      &__img {
+        width: 100%;
+        margin: 0.5rem 0;
+
+        img {
+          margin-right: 0;
+        }
+      }
+    }
+    &-control {
+      align-items: flex-start;
+      justify-content: space-between;
+
+      &__row {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        button {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
