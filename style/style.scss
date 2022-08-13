@@ -23,7 +23,7 @@ body {
 
 .box {
   width: 60%;
-  background-color: $mainColor;
+  background-color: #fff;
   border-radius: 0.5rem;
   padding: 1.8rem 2.1rem;
 
@@ -41,7 +41,7 @@ body {
         rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
       border-radius: 0.5rem;
       width: 35%;
-      padding: 0.9rem 1.2rem;
+      padding: 0.5rem 1.2rem;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -60,15 +60,13 @@ body {
           flex-wrap: wrap;
 
           button {
-            width: calc(100% / 2 - 4px);
+            width: calc(100% / 4 - 3px);
           }
           &-btn {
-            margin-bottom: 0.5rem;
-            border-radius: 0.5rem;
-            border: none;
             height: 35px;
             border: 1.5px solid $btnColor;
             transition: 0.3;
+            border-radius: 0.5rem;
 
             &.active-btn {
               background-color: $blue;

@@ -19,10 +19,10 @@ const filterOption = document.querySelectorAll(
   ".box-content__panel-filter__options button"
 );
 
-let brightness = 100,
-  saturation = 100,
-  inversion = 0,
-  grayScale = 0,
+let brightness = "100",
+  saturation = "100",
+  inversion = "0",
+  grayScale = "0",
   rotate = 0,
   flipHorizantal = 1,
   flipVertical = 1;
@@ -45,7 +45,7 @@ filterOption.forEach((option) => {
   option.addEventListener("click", () => {
     filterOption.forEach((h) => h.classList.remove("active-btn"));
     option.classList.add("active-btn");
-    filterName.innerText = option.innerText;
+    filterName.innerText = option.value;
 
     if (option.id === "brightness") {
       filterSlider.max = "200";
@@ -58,12 +58,10 @@ filterOption.forEach((option) => {
     }
     if (option.id === "inversion") {
       filterSlider.max = "100";
-
       filterSlider.value = inversion;
       filterValue.innerText = `${inversion}%`;
     } else {
       filterSlider.max = "100";
-
       filterSlider.value = grayScale;
       filterValue.innerText = `${grayScale}%`;
     }
@@ -72,10 +70,10 @@ filterOption.forEach((option) => {
 
 const updateFilter = () => {
   filterValue.innerText = `${filterSlider.value}%`;
+
   const selectFilter = document.querySelector(
     ".box-content__panel-filter__options .active-btn"
   );
-
   if (selectFilter.id === "brightness") {
     brightness = filterSlider.value;
   } else if (selectFilter.id === "saturation") {
@@ -104,10 +102,10 @@ filterRotate.forEach((option) => {
 });
 
 const resetItems = () => {
-  brightness = 100;
-  saturation = 100;
-  inversion = 0;
-  grayScale = 0;
+  brightness = "100";
+  saturation = "100";
+  inversion = "0";
+  grayScale = "0";
   rotate = 0;
   flipHorizantal = 1;
   flipVertical = 1;
